@@ -1,16 +1,18 @@
 @import "base/bootstrap-reboot.min.scss";
 @import "base/fonts.scss";
-@import "base/base.scss";
 @import "base/variables.scss";
+@import "base/base.scss";
+@import "base/tipography.scss";
 @import "base/mixins.scss";
-@import "base/mixins.scss";
+
+
 @import "blocks/promo.scss";
+@import "blocks/header.scss";
 
+@import "blocks/advantages.scss";
+@import "blocks/consultation.scss";
 
-
-
-
-
-
-
-
+@import "components/buttons.scss";
+@import "components/forms.scss";
+// 
+@import "base/media.scss";

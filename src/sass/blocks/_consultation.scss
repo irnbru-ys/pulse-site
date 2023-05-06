@@ -1,0 +1,16 @@
+.consultation {
+    min-height: 68rem;
+    padding: 10rem 0 9.2rem;
+    background: url(../../img/consultation-bg.png) center / cover no-repeat;
+
+    &__title {
+        margin-bottom: 8rem;
+    }
+    &__dscr {
+        font-size: 2rem;
+        color: white;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 3.6rem;
+    }
+}

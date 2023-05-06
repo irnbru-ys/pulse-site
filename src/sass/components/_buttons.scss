@@ -1,0 +1,27 @@
+.button {
+    width: 15rem;
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: $color-main;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &--main {
+        width: 30rem;
+        height: 5rem;
+        font-size: 1.6rem;
+        margin-bottom: 1.8rem;
+        
+    }
+    &--subbmit {
+        width: 100%;
+        height: 5rem;
+        font-size: 1.6rem;
+        
+    }
+
+}
