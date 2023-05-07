@@ -5,6 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pulse</title>
+        <!-- <link rel="stylesheet" type="text/css" href="sass/components/_slick.scss"/> -->
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+        /> -->
         <link rel="stylesheet" href="css/style.min.css" />
     </head>
     <body>
@@ -25,7 +30,6 @@
                         >
                         <button class="button">заказать звонок</button>
                     </div>
-                  
                 </header>
                 <div class="promo__wrapper">
                     <h1 class="promo__header">Подбор пульсометра</h1>
@@ -68,13 +72,17 @@
         </section>
         <section class="advantages">
             <div class="container">
-                <div class="advantages__header title--h3">НАШИ ПРЕИМУЩЕСТВА</div>
+                <div class="advantages__header title--h3">
+                    НАШИ ПРЕИМУЩЕСТВА
+                </div>
                 <div class="advantages__wrapper">
                     <div class="advantages__items">
                         <div class="advantages__icon item__icon">
                             <img src="icons/advantages-icon-1.png" alt="icon" />
                         </div>
-                        <div class="advantages__title item__title">Делимся опытом</div>
+                        <div class="advantages__title item__title">
+                            Делимся опытом
+                        </div>
                         <div class="advantages__subtitle item__subtitle">
                             Наши сотрудники всегда готовы поделиться своим
                             опытом, так как сами бегают полумарафоны, переплыли
@@ -85,8 +93,10 @@
                         <div class="advantages__icon item__icon">
                             <img src="icons/advantages-icon-2.png" alt="icon" />
                         </div>
-                        <div class="advantages__title item__title">Заботимся о здоровье</div>
-                        <div class="advantages__subtitle  item__subtitle">
+                        <div class="advantages__title item__title">
+                            Заботимся о здоровье
+                        </div>
+                        <div class="advantages__subtitle item__subtitle">
                             Мы работаем для того, чтобы Ваши занятия спортом шли
                             на пользу Вашему здоровью и были в радость Вам и
                             Вашим близким!
@@ -96,7 +106,9 @@
                         <div class="advantages__icon item__icon">
                             <img src="icons/advantages-icon-3.png" alt="icon" />
                         </div>
-                        <div class="advantages__title item__title">Учим бегать</div>
+                        <div class="advantages__title item__title">
+                            Учим бегать
+                        </div>
                         <div class="advantages__subtitle item__subtitle">
                             Помогаем с обучением правильной технике бега! Дружим
                             с крупнейшей школой бега в России - I LOVE RUNNING.
@@ -107,19 +119,64 @@
         </section>
         <section class="consultation">
             <div class="container">
-                <h2 class="consultation__title title--h2">Получите бесплатную консультацию<br>по подбору пульсометра </h2>
-                <div class="consultation__dscr">Просто заполните форму заявки<br> 
-                    и мы перезвоним вам в течении 10 минут</div>
+                <h2 class="consultation__title title--h2">
+                    Получите бесплатную консультацию<br />по подбору пульсометра
+                </h2>
+                <div class="consultation__dscr">
+                    Просто заполните форму заявки<br />
+                    и мы перезвоним вам в течении 10 минут
+                </div>
 
-                    <form class="feed-form" action="#">
-                        <input name="name" required placeholder="Ваше имя" type="text">
-                        <input name="phone" required placeholder="Ваш телефон" type="number">
-                        <input name="email" required placeholder="Ваш E-mail" type="email">
+                <form class="feed-form" action="#">
+                    <input
+                        name="name"
+                        required
+                        placeholder="Ваше имя"
+                        type="text"
+                    />
+                    <input
+                        name="phone"
+                        required
+                        placeholder="Ваш телефон"
+                        type="number"
+                    />
+                    <input
+                        name="email"
+                        required
+                        placeholder="Ваш E-mail"
+                        type="email"
+                    />
 
-                        <button class="button button--subbmit">заказать кОНСУЛЬТАЦИЮ</button>
-                    </form>
-                    
+                    <button class="button button--subbmit">
+                        заказать кОНСУЛЬТАЦИЮ
+                    </button>
+                </form>
             </div>
         </section>
+
+        <section class="carousel">
+            <div class="container">
+                <div class="carousel__inner">
+                    <div>
+                        <img src="img/slider-1.png" alt="slider" />
+                    </div>
+                    <div>
+                        <img src="img/slider-2.png" alt="slider" />
+                    </div>
+                    <div>
+                        <img src="img/slider-3.png" alt="slider" />
+                    </div>
+                </div>
+                <button type="button" class="prev">
+                    <img src="../icons/left.png" />
+                </button>
+                <button type="button" class="next">
+                    <img src="../icons/right.png" />
+                </button>
+
+                
+        <script src="js/tiny-slider.js"></script>
+        
+        <script src="js/script.js"></script>
     </body>
 </html>

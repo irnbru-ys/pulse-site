@@ -1,25 +1,60 @@
 @media (min-width: 1200px) {
-  }
+}
 
 @media (max-width: 1200px) {
- 
-}
+    .carousel { 
+        &__inner {
+            width: 80%;
+            img {
+                width: 80%;
+            }
+        }   
+        .prev {
+            left: 5%;
+        }
+        .next {
+            right: 5%;
+        }
+    }
 
+}
 
 @media (max-width: 991px) {
-    
+    .consultation {
+        &__title {
+            text-align: center;
+        }
+        &__dscr {
+            text-align: center;
+        }
+        .feed-form {
+            margin: 0 auto;
+        }
+    }
+
+    .carousel { 
+        &__inner {
+            width: 80%;
+            img {
+                width: 80%;
+            }
+        }   
+        .prev {
+            left: 5%;
+        }
+        .next {
+            right: 5%;
+        }
+    }
 }
 
-   
 @media (max-width: 767px) {
     .header {
-        justify-content: space-around;     
-        
-       &__logo {
+        justify-content: space-around;
+
+        &__logo {
             width: 20rem;
-            
         }
-        
     }
 
     .promo {
@@ -28,21 +63,28 @@
             flex-direction: column;
             align-items: center;
         }
-    }    
+    }
 
     .advantages {
         &__wrapper {
             justify-content: space-between;
-        }    
+        }
         &__items:not(:last-child) {
             margin-bottom: 2rem;
-            
+        }
+    }
+    .carousel {
+        &__inner {
+            width: 70%;
+            padding: 0 1rem;
+            margin: 0 1rem;
+            img {
+                
+                width: 70%;
+            }
         }
     }
 }
-
-
-
 
 @media (max-width: 575px) {
     .header {
@@ -84,6 +126,38 @@
         &--main {
             width: 25rem;
             font-size: 1.6rem;
-        }    
+        }
+    }
+    .consultation {
+        &__title {
+            font-size: 3.2rem;
+            line-height: 4rem;
+            margin-bottom: 5rem;
+        }
+        .feed-form {
+            align-items: center;
+            & > input,
+            & > button {
+                width: 27rem;
+            }
+        }
+        .button {
+            &--subbmit {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .carousel {
+        &__inner {
+            width: 90%;
+            img {
+                width: 90%;
+            }
+        }
+    }
+
+    .prev,
+    .next {
+        display: none;
     }
 }
