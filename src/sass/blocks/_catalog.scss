@@ -1,0 +1,181 @@
+.catalog {
+    padding-bottom: 10.3rem;
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+        list-style-type: none;
+        transform: skewX(-25deg);
+        margin-bottom: 5.9rem;
+        padding: 0;
+    }
+    &__tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22rem;
+        height: 5rem;
+        color: black;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        border: 2px solid #d0d0d0;
+        cursor: pointer;
+        &:hover {
+            transform: translate(0.2rem, -0.2rem);
+            box-shadow: (0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3));
+            border: none;
+            transition: 0.2s all;
+        }
+        // margin: 0 .5rem;
+        & > * {
+            transform: skewX(25deg);
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+        &--active {
+            background-color: $color-main;
+            color: #ffffff;
+            border: none;
+        }
+    }
+    &__content {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &--active {
+            display: flex;
+        }
+    }
+
+    &-item {
+        position: relative;
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
+        padding: 2rem 2rem 2.6rem 2rem;
+        overflow: hidden;
+        margin-bottom: 2rem;
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 20rem;
+            margin-bottom: 2rem;
+        }
+        &__subtitle {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1.6rem;
+        }
+        &__descr {
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 1.7rem;
+        }
+        &__link {
+            display: block;
+            color: #c70101;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        & > hr {
+            height: 1px;
+            background-color: #a8a8a8;
+            margin-bottom: 2.1rem;
+            border-bottom: none;
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            bottom: 0;
+        }
+
+        &__old-prise {
+            color: #555555;
+            font-size: 1.4rem;
+            font-weight: 300;
+            text-align: left;
+            text-decoration: line-through;
+            // margin-bottom: 0.9rem;
+        }
+        &__prise {
+            color: #050505;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 4rem);
+        }
+
+        &__content {
+            width: 50%;
+            margin-right: 0;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &--active {
+                transform: translateX(0%);
+                margin-right: 2rem;
+            }
+        }
+        &__list {
+            position: relative;
+            width: 50%;
+            margin-left: 2rem;
+            transform: translateX(0%);
+            transition: 0.5s all;
+            padding-right: 2rem;
+
+            padding-left: 0;
+
+            margin-bottom: 0;
+            list-style-type: square;
+            padding-left: 1.9rem;
+            margin-top: 1.8rem;
+
+            & > li {
+                color: #555555;
+                font-size: 1.4rem;
+                font-weight: 300;
+                line-height: 2.4rem;
+                text-align: left;
+            }
+            & > span {
+                color: black;
+            }
+
+            &--active {
+                transform: translateX(-100%);
+                margin-left: 0;
+            }
+        }
+        &__back {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 1.9rem));
+            color: $color-main;
+            font-size: 1.4rem;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
+}

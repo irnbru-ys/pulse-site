@@ -18,15 +18,14 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.62.1"
   },
-
   "private": true,
   "dependencies": {
-    "autoprefixer": "^6.5.4"
+    "autoprefixer": "^6.5.4",
+    "jquery": "^3.6.4"
   },
   "browserslist": [
     "last 1 version",
     "> 1%",
     "not dead"
   ]
-  
 }
