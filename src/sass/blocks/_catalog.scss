@@ -1,5 +1,8 @@
 .catalog {
     padding-bottom: 10.3rem;
+    & > .container {
+        padding: 0;
+    }
 
     &__tabs {
         display: flex;
@@ -8,7 +11,7 @@
         list-style-type: none;
         transform: skewX(-25deg);
         margin-bottom: 5.9rem;
-        padding: 0;
+        padding: 0 .5rem;
     }
     &__tab {
         display: flex;
@@ -46,7 +49,9 @@
     &__content {
         display: none;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        margin: 0 auto;
+        
         &--active {
             display: flex;
         }
@@ -59,7 +64,8 @@
         border: 2px solid #e8e8e8;
         padding: 2rem 2rem 2.6rem 2rem;
         overflow: hidden;
-        margin-bottom: 2rem;
+        margin: 0 .8rem 2rem .8rem;
+        
 
         &__img {
             display: block;
