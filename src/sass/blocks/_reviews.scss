@@ -1,0 +1,38 @@
+.reviews {
+    padding-bottom: 7.1rem;
+    &__title {
+        margin-bottom: 7rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__img {
+        margin-right: 6.1rem;
+    }
+    &__text-block {
+        margin-bottom: 10rem;
+    }
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: left;
+    }
+    &__number-marathons {
+        color: #646464;
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: left;
+    }
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-align: left;
+        max-width: 65.6rem;
+    }
+}
