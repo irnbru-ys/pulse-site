@@ -45,6 +45,24 @@
             right: 5%;
         }
     }
+    .reviews {
+        &__items {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+        &__img {
+            margin: 0;
+            margin-bottom: 2rem;
+            margin-right: 6rem;
+        }
+        &__text-block {
+            flex-grow: 10;
+            max-width: max-content;
+            margin-bottom: 5rem;
+          
+        }
+       
+    }
 }
 
 @media (max-width: 767px) {
@@ -81,6 +99,25 @@
                 width: 70%;
             }
         }
+    }
+
+    .reviews {
+        &__items {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+        &__img {
+            margin: 0;
+            margin-bottom: 2rem;
+            margin-right: 6rem;
+        }
+        &__text-block {
+            flex-grow: 10;
+            max-width: max-content;
+            margin-bottom: 5rem;
+          
+        }
+       
     }
 }
 
@@ -164,8 +201,7 @@
             flex-direction: column;
             align-items: center;
             transform: skewX(0deg);
-            
-        }    
+        }
         &__tab {
             &:not(:last-child) {
                 margin: 0;
@@ -180,8 +216,22 @@
                 border: none;
                 transition: 0.2s all;
             }
-        
- 
         }
     }
-}  
+    .reviews {
+        &__items {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__img {
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+        &__text-block {
+            margin-bottom: 5rem;
+        }
+        &__name, &__number-marathons {
+            text-align: center;
+        } 
+    }
+}
