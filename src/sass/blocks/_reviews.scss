@@ -11,13 +11,28 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
+        &:not(:last-child) {
+            margin-bottom: 10rem;
+        }
     }
     &__img {
+        position: relative;
+        width: 16.6rem;
+        height: 16.9rem;
+        background: white center (center / cover) no-repeat;
+        border-radius: 100%;
         margin-right: 6.1rem;
+        overflow: hidden;
+        & > * {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
-    &__text-block {
-        margin-bottom: 10rem;
-    }
+
     &__name {
         font-size: 1.8rem;
         font-weight: 700;
