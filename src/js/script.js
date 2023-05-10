@@ -76,4 +76,93 @@ $(document).ready(function () {
 
     toggleSlide(".catalog-item__link");
     toggleSlide(".catalog-item__back");
+
+    //modal
+
+    $("[data-modalM=consultation]").on("click", function () {
+        $(".overlay, #consultation").fadeIn("slow");
+    });
+    $(".modalM__close").on("click", function () {
+        $(".overlay, #consultation, #thanks, #order").fadeOut("slow");
+    });
+    // $('.button--mini').on('click', function() {
+    //     $('.overlay, #order').fadeIn('slow');
+    // });
+
+    $(".button--mini").each(function (i) {
+        $(this).on("click", function () {
+            $("#order .modal__descr").text(
+                $(".catalog-item__subtitle").eq(i).text()
+            );
+            $(".overlay, #order").fadeIn("slow");
+        });
+    });
+
+    // $("#consultation-form").validate();
+    // $("#consultation form").validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //             minlength: 2,
+    //         },
+    //         phone: {
+    //             required: true,
+    //             minlength: 11,
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true,
+    //         },
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: "Пожалуйста, введите Ваше имя",
+    //             minlength: jQuery.validator.format(
+    //                 "Введите минимум {0} символа!"
+    //             ),
+    //         },
+    //         phone: "Пожалуйста, введите свой номер телефона (формата 89632346534 (11 цифр)",
+    //         email: {
+    //             required: "Пожалуйста, введите сввой E-mail",
+    //             email: "Ваш E-mail должен быть формата: name@domain.ru",
+    //         },
+    //     },
+    // });
+    // $("#order form").validate();
+
+    function validForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                phone: {
+                    required: true,
+                    minlength: 11,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите Ваше имя",
+                    minlength: jQuery.validator.format(
+                        "Введите минимум {0} символа!"
+                    ),
+                },
+                phone: "Пожалуйста, введите свой номер телефона (формата 89632346534 (11 цифр)",
+                email: {
+                    required: "Пожалуйста, введите сввой E-mail",
+                    email: "Ваш E-mail должен быть формата: name@domain.ru",
+                },
+            },
+        });
+    };
+
+    validForms("#consultation-form");
+    validForms("#consultation form");
+    validForms("#order form");
 });
