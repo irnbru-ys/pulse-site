@@ -61,10 +61,7 @@
         &__text-block {
             flex-grow: 10;
             max-width: max-content;
-            
-          
         }
-       
     }
 }
 
@@ -121,7 +118,6 @@
             flex-grow: 10;
             max-width: max-content;
         }
-       
     }
 }
 
@@ -240,15 +236,16 @@
             &:not(:last-child) {
                 margin-bottom: 5rem;
             }
-        }   
+        }
         &__img {
             margin: 0;
             margin-bottom: 2rem;
         }
-        
-        &__name, &__number-marathons {
+
+        &__name,
+        &__number-marathons {
             text-align: center;
-        } 
+        }
     }
 
     // .footer {
@@ -259,8 +256,8 @@
     //         max-width: 100%;
     //     }
     // }
-    
-    .modalM {
+
+    .modalm {
         max-width: 30rem;
 
         .button--subbmit {

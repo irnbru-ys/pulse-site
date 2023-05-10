@@ -1,49 +1,49 @@
-const slider = tns({
-    container: ".carousel__inner",
-    items: 1,
-    slideBy: "page",
-    autoplay: false,
-    controls: false,
-    navPosition: "bottom",
-    nav: true,
-
-    controlsText: [
-        '<img src="../icons/left.png">',
-        '<img src="../icons/right.png">',
-    ],
-    responsive: {
-        320: {
-            items: 1,
-            nav: true,
-        },
-
-        573: {
-            items: 1,
-            nav: true,
-        },
-
-        574: {
-            items: 1,
-            nav: false,
-            edgePadding: 20,
-            gutter: 20,
-        },
-
-        700: {
-            items: 1,
-            nav: false,
-        },
-    },
-});
-
-document.querySelector(".prev").addEventListener("click", function () {
-    slider.goTo("prev");
-});
-document.querySelector(".next").addEventListener("click", function () {
-    slider.goTo("next");
-});
-
 $(document).ready(function () {
+    const slider = tns({
+        container: ".carousel__inner",
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        controls: false,
+        navPosition: "bottom",
+        nav: true,
+
+        controlsText: [
+            '<img src="../icons/left.png">',
+            '<img src="../icons/right.png">',
+        ],
+        responsive: {
+            320: {
+                items: 1,
+                nav: true,
+            },
+
+            573: {
+                items: 1,
+                nav: true,
+            },
+
+            574: {
+                items: 1,
+                nav: false,
+                edgePadding: 20,
+                gutter: 20,
+            },
+
+            700: {
+                items: 1,
+                nav: false,
+            },
+        },
+    });
+
+    document.querySelector(".prev").addEventListener("click", function () {
+        slider.goTo("prev");
+    });
+    document.querySelector(".next").addEventListener("click", function () {
+        slider.goTo("next");
+    });
+
     $("ul.catalog__tabs").on(
         "click",
         "li:not(.catalog__tab--active)",
@@ -79,10 +79,10 @@ $(document).ready(function () {
 
     //modal
 
-    $("[data-modalM=consultation]").on("click", function () {
+    $("[data-modalm=consultation]").on("click", function () {
         $(".overlay, #consultation").fadeIn("slow");
     });
-    $(".modalM__close").on("click", function () {
+    $(".modalm__close").on("click", function () {
         $(".overlay, #consultation, #thanks, #order").fadeOut("slow");
     });
     // $('.button--mini').on('click', function() {
@@ -91,44 +91,12 @@ $(document).ready(function () {
 
     $(".button--mini").each(function (i) {
         $(this).on("click", function () {
-            $("#order .modal__descr").text(
+            $("#order .modalm__descr").text(
                 $(".catalog-item__subtitle").eq(i).text()
             );
             $(".overlay, #order").fadeIn("slow");
         });
     });
-
-    // $("#consultation-form").validate();
-    // $("#consultation form").validate({
-    //     rules: {
-    //         name: {
-    //             required: true,
-    //             minlength: 2,
-    //         },
-    //         phone: {
-    //             required: true,
-    //             minlength: 11,
-    //         },
-    //         email: {
-    //             required: true,
-    //             email: true,
-    //         },
-    //     },
-    //     messages: {
-    //         name: {
-    //             required: "Пожалуйста, введите Ваше имя",
-    //             minlength: jQuery.validator.format(
-    //                 "Введите минимум {0} символа!"
-    //             ),
-    //         },
-    //         phone: "Пожалуйста, введите свой номер телефона (формата 89632346534 (11 цифр)",
-    //         email: {
-    //             required: "Пожалуйста, введите сввой E-mail",
-    //             email: "Ваш E-mail должен быть формата: name@domain.ru",
-    //         },
-    //     },
-    // });
-    // $("#order form").validate();
 
     function validForms(form) {
         $(form).validate({
@@ -160,9 +128,32 @@ $(document).ready(function () {
                 },
             },
         });
-    };
+    }
 
     validForms("#consultation-form");
     validForms("#consultation form");
     validForms("#order form");
+
+    $("input[name=phone]").mask("+7(999) 999-99-99");
+
+    $("form").submit(function (e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize(),
+        }).done(function () {
+            $(this).find("input").val("");
+            $("#consultation, #order").fadeOut();
+            $(".overlay, #thanks").fadeIn();
+
+            $("form").trigger("reset");
+        });
+        return false;
+    });
 });

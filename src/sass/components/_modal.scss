@@ -6,7 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.56);
 }
-.modalM {
+.modalm {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,6 +49,8 @@
     }
 }
 
-#consultation, #order, #thanks {
+#consultation,
+#order,
+#thanks {
     display: none;
 }
