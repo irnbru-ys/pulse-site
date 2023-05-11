@@ -5,7 +5,8 @@
 @import "base/base.scss";
 @import "base/tipography.scss";
 @import "base/mixins.scss";
-
+@import "base/animations.scss";
+@import "base/animate.min.scss";
 
 @import "blocks/promo.scss";
 @import "blocks/header.scss";
@@ -22,5 +23,5 @@
 @import "components/tiny-slider.scss";
 @import "components/modal.scss";
 @import "components/pageup.scss";
-// 
+//
 @import "base/media.scss";

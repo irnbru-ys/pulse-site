@@ -10,11 +10,15 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 0 auto;
+         
+        
     }
     &__items {
         width: 24.7rem;
         text-align: center;
         margin: 0 auto;
+                                  
+        
     }
 
     &__icon {
@@ -22,6 +26,14 @@
         width: 7rem;
         height: auto;
         margin-bottom: 3.8rem;
+                       
+        &--animated {
+            animation-name: heartbeat;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            
+        }
     }
 
     &__title {
