@@ -1,7 +1,7 @@
 .promo {
     min-height: 65rem;
     padding: 2.1rem 0 9.3rem;
-    background: url(../../img/promo-bg.png) center / cover no-repeat;
+    background: url(../img/promo-bg.jpeg) center / cover no-repeat;
 
     &__wrapper {
         display: flex;
@@ -10,7 +10,7 @@
     }
     &__header {
         color: $color-white;
-        
+
         font-size: 4.2rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -19,7 +19,7 @@
 
     &__subheader {
         color: #ffffff;
-        
+
         font-size: 2.4rem;
         font-weight: 500;
         text-transform: uppercase;
@@ -32,7 +32,6 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 6.7rem;
-
     }
     &__icon {
         width: 10.8rem;
@@ -41,12 +40,11 @@
         font-size: 1.4rem;
         font-weight: 400;
         color: $color-white;
-        
+
         img {
             display: block;
             margin: 0 auto;
             margin-bottom: 20px;
-
         }
     }
     &__link {
@@ -55,8 +53,7 @@
         font-weight: 500;
         a {
             text-transform: uppercase;
-            color: $color-white
+            color: $color-white;
         }
     }
-
 }
